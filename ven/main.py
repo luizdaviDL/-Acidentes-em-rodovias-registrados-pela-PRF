@@ -106,8 +106,8 @@ def main(page: ft.Page):
                     s.append(j)
 
             plt.title('Tipos dos veículos que se acidentaram em via decrescente')
-            plt.xlabel('tipo de veículos', fontsize = 11)
-            plt.ylabel('Qtd em vias decrescentes', fontsize = 11)
+            plt.ylabel('tipo de veículos', fontsize = 11)
+            plt.xlabel('Qtd em vias decrescentes', fontsize = 11)
 
         if output_text.value == "12 - Quais eram as fases dos dias quando a causa foi reação tardia ou ineficiente?":
             for v,j in zip(x['causa_acidente'],x['fase_dia']):
@@ -124,8 +124,8 @@ def main(page: ft.Page):
                     s.append(j)
 
             plt.title('Condições meteorológicas dos acidentes onde houve uma colisão frontal')
-            plt.xlabel('Qtd de ondições meteorológicas', fontsize = 11)
-            plt.ylabel('Colisão frontal', fontsize = 11) 
+            plt.xlabel('Condições meteorológicas', fontsize = 11)
+            plt.ylabel('Quantidade', fontsize = 11) 
 
         if output_text.value ==  '14 - Quais foram as condições dos condutores quando houve tombamento?':    
             for v,j in zip(x['tipo_acidente'],x['estado_fisico']):
@@ -133,8 +133,8 @@ def main(page: ft.Page):
                     s.append(j)
 
             plt.title('Condições dos condutores quando houve tombamento')
-            plt.xlabel('Condição dos motoristas', fontsize = 11)
-            plt.ylabel('Qtd de tombamento', fontsize = 11) 
+            plt.ylabel('Condição dos motoristas', fontsize = 11)
+            plt.xlabel('Qtd de tombamento', fontsize = 11) 
         
         if output_text.value == '15 - Quais os dias da semana que mais tiveram condutores dormindo?':
             for v,j in zip(x['causa_acidente'],x['dia_semana']):
@@ -142,8 +142,8 @@ def main(page: ft.Page):
                     s.append(j)
 
             plt.title('Dias da semana que mais tiveram condutores dormindo')
-            plt.xlabel('Dias da semana', fontsize = 11)
-            plt.ylabel('Condutores dormindo', fontsize = 11) 
+            plt.ylabel('Dias da semana', fontsize = 11)
+            plt.xlabel('Condutores dormindo', fontsize = 11) 
         
         if output_text.value == '16 - Quantos acidentes ocorreram por conta de uma reação tardia ou ineficiente do condutor?':
             for v,j in zip(x['causa_acidente'],x['tipo_acidente']):
@@ -181,8 +181,8 @@ def main(page: ft.Page):
                     s.append(j)
 
             plt.title('Fases do dia onde ocorreu chuva')
-            plt.xlabel('Fases do dia', fontsize = 11)
-            plt.ylabel('Chuva', fontsize = 11) 
+            plt.ylabel('Fases do dia', fontsize = 11)
+            plt.xlabel('Chuva', fontsize = 11) 
 
         if output_text.value ==  '20 - Quais eram as classificações dos acidentes onde ocorreu incêndio?':
             for v,j in zip(x['tipo_acidente'],x['classificacao_acidente']):
@@ -190,8 +190,8 @@ def main(page: ft.Page):
                     s.append(j)
 
             plt.title('Classificações dos acidentes com incêndio')
-            plt.xlabel('Classificações', fontsize = 11)
-            plt.ylabel('Incêndios', fontsize = 11) 
+            plt.ylabel('Classificações', fontsize = 11)
+            plt.xlabel('Quantidade de Incêndios', fontsize = 11) 
 
         if output_text.value ==  "21 - Quais eram as classificações dos acidentes por dirigirem na contramão?":
             for v,j in zip(x['causa_acidente'],x['classificacao_acidente']):
@@ -201,7 +201,7 @@ def main(page: ft.Page):
             plt.xlabel('Quantidade')
             plt.ylabel('Classificações dos acidentes')
 
-        if output_text.value ==  "22- Quais eram os estados físicos das vitimas por condutor acessar a via sem observar a presença dos outros veículos?":
+        if output_text.value ==  "22- Quais os estados físicos das vitimas onde o condutor acessou a via sem observar a presença de outros veículos?":
             for v,j in zip(x['causa_acidente'],x['estado_fisico']):
                 if "Acessar a via sem observar a presença dos outros veículos" in v:
                     s.append(j)
@@ -305,7 +305,7 @@ def main(page: ft.Page):
             ft.dropdown.Option('19 - Quais eram as fases dos dias onde ocorreu chuva?'),
             ft.dropdown.Option('20 - Quais eram as classificações dos acidentes onde ocorreu incêndio?'),
             ft.dropdown.Option("21 - Quais eram as classificações dos acidentes por dirigirem na contramão?"),
-            ft.dropdown.Option("22- Quais eram os estados físicos das vitimas por condutor acessar a via sem observar a presença dos outros veículos?"),
+            ft.dropdown.Option("22- Quais os estados físicos das vitimas onde o condutor acessou a via sem observar a presença de outros veículos?"),
             ft.dropdown.Option("23 - Quais eram as fases dos dias nos acidentes em que o condutor ingeriu bebida alcoolica?"),
             ft.dropdown.Option("24 - Quais eram os estados das vitimas por conta do condutor deixar de manter distância do veiculo da frente?"),
             ft.dropdown.Option("25 - Quais eram as classificações dos acidentes envolvendo motocicletas?"),
